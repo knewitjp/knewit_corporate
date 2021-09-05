@@ -1,0 +1,19 @@
+$breakpoints: (
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 960px)',
+  'xl': 'screen and (min-width: 1140px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}

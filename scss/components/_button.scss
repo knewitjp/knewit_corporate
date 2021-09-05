@@ -1,0 +1,40 @@
+@import '../base/mixins';
+
+.btn {
+  height: 60px;
+  @include flex-center;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  @include transition-ease;
+
+  &::after {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0da';
+    position: absolute;
+    right: 18px;
+    @include transition-ease;
+  }
+  &:hover {
+    &::after {
+      right: 15px;
+    }
+  }
+
+  &.btn-normal {
+    width: 200px;
+    background: $color-btn;
+    background-size: 200% auto;
+    &:hover {
+      background-position: right center;
+    }
+  }
+  &.btn-transparent {
+    border: 1px solid #fff;
+    width: 220px;
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+}

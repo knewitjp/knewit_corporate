@@ -1,0 +1,6 @@
+.u-sp-only {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}

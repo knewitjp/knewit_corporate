@@ -1,0 +1,54 @@
+.nav {
+  &__list {
+  }
+  &__list-item {
+  }
+  &__link {
+  }
+}
+.menu-btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: 1px solid red;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .burger {
+    width: 29px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    @include transition-ease;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 29px;
+      height: 2px;
+      background: #fff;
+      @include transition-ease;
+    }
+    &::before {
+      top: -9px;
+    }
+    &::after {
+      top: 9px;
+    }
+    &.open {
+      background: transparent;
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
