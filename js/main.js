@@ -25,10 +25,10 @@ function toggleMenu() {
     spaceBetween: 30,
     centeredSlides: true,
     loop: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -36,8 +36,20 @@ function toggleMenu() {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    },
-    // scrollbar: {
-    //     el: '.swiper-scrollbar',
-    //   },
+    }
 });
+
+// Page top 
+window.addEventListener('scroll', showBtn)
+const toTopBtn = document.querySelector('.to-top')
+
+function showBtn() {
+  let pageY = window.pageYOffset
+  if(pageY > 400) {
+    toTopBtn.classList.add('open')
+  } else {
+    toTopBtn.classList.remove('open')
+  }
+}
+
+toTopBtn.addEventListener('click', () => window.scrollTo(0, 0))

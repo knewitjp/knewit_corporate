@@ -45,9 +45,23 @@
     &__link {
       font-size: 14px;
       font-weight: 400;
+      padding-bottom: 3px;
       @include transition-ease;
+      position: relative;
+      &::after {
+        content: '';
+        width: 0;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        background: white;
+        height: 1px;
+        @include transition-ease;
+      }
       &:hover {
-        filter: brightness(70%);
+        &::after {
+          width: 100%;
+        }
       }
     }
   }

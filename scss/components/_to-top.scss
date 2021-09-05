@@ -1,0 +1,25 @@
+.to-top {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.3rem;
+  width: 55px;
+  height: 55px;
+  background: $purple-font;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  @include flex-center;
+  @include transition-ease;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__link {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+}
