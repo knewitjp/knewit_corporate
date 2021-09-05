@@ -1,21 +1,68 @@
 .nav {
+  height: 100vh;
+  width: 100vw;
+  background: $purple-gradient;
+  z-index: 2;
+  position: absolute;
+  @include flex-center;
+  @include transition-ease;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
   &__list {
+    list-style: none;
   }
   &__list-item {
+    text-align: center;
+    margin-bottom: 14px;
   }
   &__link {
+    font-weight: 600;
+    color: #fff;
+  }
+  @include mq(md) {
+    padding-right: 30px;
+    visibility: visible;
+    justify-content: flex-end;
+    // align-items: flex-start;
+    background: transparent;
+    height: 100%;
+    opacity: 1;
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+    &__list-item {
+      margin-left: 18px;
+      margin-bottom: 0;
+    }
+    &__link {
+      font-size: 14px;
+      font-weight: 400;
+      @include transition-ease;
+      &:hover {
+        filter: brightness(70%);
+      }
+    }
   }
 }
 .menu-btn {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  border: 1px solid red;
+  z-index: 3;
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: $outer-margin-size;
+  @include mq(md) {
+    display: none;
+  }
 
   .burger {
     width: 29px;
@@ -34,10 +81,10 @@
       @include transition-ease;
     }
     &::before {
-      top: -9px;
+      top: -7px;
     }
     &::after {
-      top: 9px;
+      top: 7px;
     }
     &.open {
       background: transparent;

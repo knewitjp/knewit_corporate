@@ -1,6 +1,7 @@
 @import '../base/mixins';
 
 .btn {
+  cursor: pointer;
   height: 60px;
   @include flex-center;
   border-radius: 100px;
@@ -35,6 +36,9 @@
     width: 220px;
     &:hover {
       filter: brightness(80%);
+    }
+    @include mq(md) {
+      margin: 0 auto;
     }
   }
 }
