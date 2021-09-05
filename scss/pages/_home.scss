@@ -51,3 +51,246 @@
     }
   }
 }
+.news {
+  margin-top: 3rem;
+  padding: 0 $outer-margin-size;
+
+  &__contents {
+    margin-top: 1.5rem;
+  }
+  &__content {
+    margin-bottom: 2rem;
+    .date-tag {
+      // border: 1px solid red;
+      display: flex;
+      align-items: center;
+
+      &__date {
+        font-size: 15px;
+        font-weight: 400;
+      }
+      &__tag {
+        margin-bottom: 2px;
+        background: $gray;
+        font-size: 12px;
+        font-weight: 700;
+        // padding: 2px 25px;
+        border-radius: 50px;
+        min-width: 100px;
+        @include flex-center;
+        margin-left: 1.5rem;
+        // line-height: 12px;
+      }
+    }
+  }
+  @include mq(md) {
+    display: flex;
+    max-width: 960px;
+    padding: 0;
+
+    // align-items: ;
+    margin: 3rem auto 6rem;
+
+    .heading-section {
+      margin-right: 2rem;
+      h3 {
+        text-align: left;
+      }
+    }
+    &__contents {
+      margin-top: 0;
+    }
+    &__content {
+      display: flex;
+      align-items: flex-start;
+    }
+    &__title {
+      margin-left: 1.5rem;
+    }
+  }
+}
+.service {
+  padding: 0 $outer-margin-size;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  &__list {
+    margin-top: 2rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    margin: 0.3rem 0;
+    text-align: center;
+  }
+  &__desc {
+    margin-bottom: 2.5rem;
+  }
+  &__btn-wrapper {
+    a {
+      margin: 0 auto;
+    }
+  }
+  @include mq(md) {
+    max-width: 960px;
+    margin: 0 auto 9rem;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__list-item {
+      width: 31%;
+      // margin: 0 1rem;
+      // &:nth-child(1) {
+      //   margin-left: 0;
+      // }
+    }
+  }
+}
+.works {
+  padding-bottom: 5rem;
+  background: linear-gradient(to top, $gray-bg 75%, transparent 25%);
+  .slider {
+    padding: 0 $outer-margin-size;
+    position: relative;
+  }
+  .swiper {
+    width: 100%;
+    // border: 1px solid red;
+  }
+  .swiper-pagination {
+    position: static;
+    text-align: right;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background: $purple-font;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .heading-section {
+    position: relative;
+    padding-top: 2rem;
+  }
+  &__desc {
+    margin-top: 2rem;
+    position: relative;
+    text-align: center;
+  }
+  &__btn-wrapper {
+    width: 100%;
+    margin-top: 2rem;
+    .btn {
+      margin: 0 auto;
+    }
+  }
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    max-width: 960px;
+    border: 1px solid red;
+    margin: 0 auto 3rem;
+    padding: 4rem 2rem 5rem 0;
+
+    background: linear-gradient(to left, $gray-bg 75%, transparent 25%);
+    .slider {
+      width: 60%;
+      padding-left: 0;
+      padding-right: 50px;
+    }
+  }
+}
+.company {
+  padding: 8rem $outer-margin-size 7rem;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  background-image: url('/img/sp_bg-circle.png');
+  background-position: center center;
+  background-size: 375px;
+  text-align: center;
+  @include mq(md) {
+    // margin-top: 3rem;
+    background-image: url('/img/bg-circle.png'), url('/img/bg-face.png');
+    background-position: center -10px, center 40px;
+    background-size: 70%, 90%;
+  }
+  &__slogan-wrapper {
+    width: 100%;
+    // border: 1px solid red;
+    display: inline-block;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  &__slogan {
+    // padding-top: 2rem;
+    line-height: 1.6;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    background: linear-gradient(transparent 75%, #f5f534 0%);
+  }
+  &__desc {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include mq(xl) {
+    padding-bottom: 12rem;
+  }
+}
+.recruit {
+  margin-bottom: 5rem;
+  &__img-wrapper {
+    img {
+      width: 100vw;
+      display: block;
+    }
+  }
+  &__contents {
+    padding: 4.5rem 0;
+    background: $gray-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__desc {
+    margin: 1.5rem 0;
+  }
+  @include mq(md) {
+    max-width: 1140px;
+    padding: 0 3rem;
+    margin: 0 auto 7rem;
+    display: flex;
+    flex-direction: row-reverse;
+    &__img-wrapper {
+      // flex: 0 0 59.9099%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    &__contents {
+      width: 40%;
+      padding: 0;
+      justify-content: center;
+    }
+  }
+}
+.contact {
+  background: $gray-bg;
+  padding: 4rem 0;
+  &__desc {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  @include mq(md) {
+    padding: 6rem 0;
+  }
+}

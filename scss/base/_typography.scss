@@ -1,9 +1,15 @@
 .heading-section {
+}
+.heading-section__primary {
   font-size: 36px;
   line-height: 1.2;
+  color: $purple-font;
+  text-align: center;
 }
 .heading-section__sub {
   font-size: 13px;
+  color: $purple-font;
+  text-align: center;
 }
 .heading-secondary {
   font-size: 18px;

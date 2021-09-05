@@ -43,7 +43,9 @@ hr {
   height: 0; /* Add the correct box sizing in Firefox */
   color: inherit; /* Correct border color in Firefox. */
 }
-
+li {
+  list-style: none;
+}
 details,
 main {
   display: block; /* Render the `main` element consistently in IE. */

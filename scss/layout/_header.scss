@@ -15,8 +15,12 @@ header {
     display: flex;
     align-items: center;
     padding-top: 8px;
+    cursor: pointer;
     img {
-      width: 150px;
+      width: 35px;
+      @include mq(md) {
+        width: 45px;
+      }
     }
     @include mq(md) {
       margin-left: 30px;
