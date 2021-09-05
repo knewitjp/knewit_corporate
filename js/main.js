@@ -2,7 +2,7 @@ const nav = document.querySelector('.nav')
 const menuBtn = document.querySelector('.menu-btn')
 const burger = document.querySelector('.burger')
 // const navItems = document.querySelectorAll('.menu-nav__item')
-
+const header = document.querySelector('header')
 let showMenu = false
 
 menuBtn.addEventListener('click', toggleMenu)
@@ -45,10 +45,14 @@ const toTopBtn = document.querySelector('.to-top')
 
 function showBtn() {
   let pageY = window.pageYOffset
-  if(pageY > 400) {
+  if(pageY > 800) {
+    header.classList.add('open')
+  } else if(pageY > 400){
     toTopBtn.classList.add('open')
+    header.classList.remove('open')
   } else {
     toTopBtn.classList.remove('open')
+
   }
 }
 

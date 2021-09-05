@@ -2,11 +2,11 @@ header {
   width: 100vw;
   height: 50px;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 0 13px;
+  @include transition-ease;
   &__logo {
   }
   h1 {
@@ -14,7 +14,6 @@ header {
     line-height: 50px;
     display: flex;
     align-items: center;
-    padding-top: 8px;
     cursor: pointer;
     img {
       width: 35px;
@@ -27,6 +26,16 @@ header {
     }
   }
   @include mq(md) {
-    height: 80px;
+    height: 70px;
+  }
+  &.open {
+    @include transition-ease;
+    // background: linear-gradient(
+    //   to left,
+    //   rgba(7, 1, 45, 0.9) 50%,
+    //   rgba(7, 1, 45, 0.8) 70%,
+    //   rgba(35, 5, 80, 0.7) 100%
+    // );
+    background: rgba(30, 3, 70, 0.9);
   }
 }
