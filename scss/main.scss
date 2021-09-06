@@ -9,8 +9,23 @@
 @import './layout/header';
 @import './layout/footer';
 
+@import './components/hero';
 @import './components/button';
 @import './components/menu';
+@import './components/breadcrumb';
 @import './components/to-top';
+@import './components/news';
+@import './components/article';
+@import './components/pagination';
+@import './components/contact';
 
 @import './pages/home';
+
+.news-page-main {
+  .news {
+    padding-bottom: 5rem;
+    &__contents {
+      margin-bottom: 3rem;
+    }
+  }
+}

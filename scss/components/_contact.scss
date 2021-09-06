@@ -1,0 +1,11 @@
+.contact {
+  background: $gray-bg;
+  padding: 4rem 0;
+  &__desc {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  @include mq(md) {
+    padding: 6rem 0;
+  }
+}

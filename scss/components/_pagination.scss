@@ -1,0 +1,23 @@
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  //   background: red;
+
+  &__item {
+    width: 35px;
+    height: 35px;
+    margin: 0 0.3rem;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    @include flex-center;
+
+    // background: red;
+    background: $purple-gradient;
+    &.active {
+      color: $purple-font;
+      background: rgb(204, 197, 227);
+    }
+  }
+}

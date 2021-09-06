@@ -57,3 +57,14 @@ function showBtn() {
 }
 
 toTopBtn.addEventListener('click', () => window.scrollTo(0, 0))
+
+// 記事が長い場合に短くする
+// articleページのみで行うので、URLを確認
+if(location.href.includes('article')) {
+  let titleContent = document.querySelector('.breadcrumb__article-title').textContent
+  if(titleContent.length > 10) {
+    const shortTitle = titleContent.slice(0, 12)
+    console.log(shortTitle)
+    document.querySelector('.breadcrumb__article-title').textContent = shortTitle + '...';
+  }
+}

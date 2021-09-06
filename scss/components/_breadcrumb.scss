@@ -1,0 +1,19 @@
+.breadcrumb {
+  background: $light-gray;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  padding: 0.3rem 15px;
+  @include mq(md) {
+    // padding: 1rem $padding-section-pc;
+    padding: 1rem 2rem;
+  }
+  &__home {
+    color: $purple-font;
+  }
+  &__arrow {
+    padding: 0 0.5rem;
+  }
+  &__this-page {
+  }
+}

@@ -44,20 +44,19 @@
             <div class="burger"></div>
         </div>
     </header>
-    <main>
-        <div class="hero">
-            <div class="hero__inner">
-                <h1 class="hero__title">WEB <br class="u-sp-only">DESIGN <br class="u-sp-only">SPECIALIST</h1>
-                <h2 class="hero__subtitle">お客様の夢を叶える<br class="u-sp-only">Webサイトを制作</h2>
-                <a href="./contact.html" class="btn btn-transparent">CONTACT</a>
+    <main class="news-page-main">
+        <div class="hero-sub">
+            <div class="heading-hero">
+                <h2 class="heading-hero__primary">COMPANY</h2>
+                <h3 class="heading-hero__sub">私たちについて</h3>
             </div>
-            <span class="hero__scroll">SCROLL</span>
+        </div>
+        <div class="breadcrumb">
+            <a class="breadcrumb__home" href="index.html">HOME</a>
+            <span class="breadcrumb__arrow">></span>
+            <span class="breadcrumb__this-page">NEWS</span>
         </div>
         <section class="news">
-            <div class="heading-section">
-                <h2 class="heading-section__primary">NEWS</h2>
-                <h3 class="heading-section__sub">お知らせ</h3>
-            </div>
             <div class="news__contents">
                 <div class="news__content">
                     <div class="date-tag">
@@ -99,111 +98,12 @@
                     <a href="article.html" class="news__title">シンガポールに開発拠点をオープンしました</a>
                 </div>
             </div>
-        </section>
-
-        <section class="service">
-            <div class="heading-section">
-                <h2 class="heading-section__primary">SERVICE</h2>
-                <h3 class="heading-section__sub">事業内容</h3>
-            </div>
-            <div class="service__list">
-                <div class="service__list-item">
-                    <img src="./img/service01.jpg" alt="" class="service__img">
-                    <h3 class="service__title">Webサイト制作</h3>
-                    <p class="service__desc">
-                        新規サイトはもちろん、サイトリニューアルやランディングページ制作も行っております。
-                    </p>
-                </div>
-                <div class="service__list-item">
-                    <img src="./img/service02.jpg" alt="" class="service__img">
-                    <h3 class="service__title">サイト保守・運用</h3>
-                    <p class="service__desc">
-                        サイトの更新作業や独自のアクセス解析に基づいたサイト改善のご提案が可能です。
-                    </p>
-                </div>
-                <div class="service__list-item">
-                    <img src="./img/service03.jpg" alt="" class="service__img">
-                    <h3 class="service__title">スマホアプリ開発</h3>
-                    <p class="service__desc">
-                        スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。
-                    </p>
-                </div>
-            </div>
-            <div class="service__btn-wrapper">
-                <a href="./service.html" class="btn btn-normal">MORE</a>
-            </div>
-        </section>
-        <section class="works">
-            <div class="slider">
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-                      <div class="swiper-slide">
-                        <img src="./img/works/01.jpg" alt="" class="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./img/works/02.jpg" alt="" class="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./img/works/03.jpg" alt="" class="">
-                      </div>
-                      ...
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                  </div>
-            </div>
-            <div class="works__contents">
-                <div class="heading-section">
-                    <h2 class="heading-section__primary">WORKS</h2>
-                    <h3 class="heading-section__sub">事業内容</h3>
-                </div>
-                <div class="works__desc">
-                    様々なジャンルのWebサイト制作が可能です。<br>
-                    ご購入やお申込み数の増加などを実現します！
-                </div>
-                <div class="works__btn-wrapper">
-                    <a href="./works.html" class="btn btn-normal">MORE</a>
-                </div>
-            </div>
-        </section>
-        <section class="company">
-            <div class="heading-section">
-                <h2 class="heading-section__primary">COMPANY</h2>
-                <h3 class="heading-section__sub">私たちについて</h3>
-            </div>
-            <div class="company__slogan-wrapper">
-                <span class="company__slogan">
-                    サイトのゴール = <br class="u-sp-only">夢を叶えること
-                </span>
-            </div>
-            <div class="company__desc">
-                お客様の夢を叶えること。<br>
-                それがWebサイトのゴールであり、<br class="u-sp-only">
-                私たちが目指すことです。<br>
-                だからこそちゃんと成果を出すサイトを<br class="u-sp-only">
-                全力でお作りします。<br>
-                お客様の笑顔を見たい。<br>
-                夢を実現する手助けをさせてください。
-            </div>
-            <div class="works__btn-wrapper">
-                <a href="./company.html" class="btn btn-normal">MORE</a>
-            </div>
-        </section>
-        <section class="recruit">
-            <div class="recruit__img-wrapper">
-                <img src="./img/recruit.jpg" alt="">
-            </div>
-            <div class="recruit__contents">
-                <div class="heading-section">
-                    <h2 class="heading-section__primary">RECRUIT</h2>
-                    <h3 class="heading-section__sub">採用情報</h3>
-                </div>
-                <div class="recruit__desc">私たちと一緒に働きませんか？</div>
-                <div class="recruit__btn-wrapper">
-                    <a href="./company.html" class="btn btn-normal">MORE</a>
-                </div>
+            <div class="news__pagination">
+                <ul class="pagination-list">
+                    <li class="pagination-list__item active">1</li>
+                    <li class="pagination-list__item">2</li>
+                    <li class="pagination-list__item">3</li>
+                </ul>
             </div>
         </section>
         <section class="contact">
@@ -216,6 +116,7 @@
                 <a href="./company.html" class="btn btn-normal">MORE</a>
             </div>
         </section>
+
 
     </main>
     
