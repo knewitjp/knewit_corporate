@@ -1,0 +1,28 @@
+.works-component {
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+  padding: 0 15px;
+  .work {
+    margin-bottom: 3rem;
+    &__img {
+      width: 100%;
+      box-shadow: 0 0 5px rgb(203, 203, 203);
+    }
+    &__title {
+      text-align: center;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+  }
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+    grid-gap: 3vw;
+    margin: 3rem auto 5rem;
+
+    .work {
+      margin-bottom: 0;
+    }
+  }
+}
