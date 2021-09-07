@@ -1,0 +1,45 @@
+body {
+  //   background: red;
+}
+.article-wrapper {
+  padding: 4rem 15px;
+  border: 1px solid red;
+  .article {
+    margin-bottom: 5rem;
+    &__title {
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+    &__img {
+      width: 100%;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    &__par {
+      padding: 0.5rem 0;
+    }
+    &__headding {
+      &--primary {
+        font-size: 24px;
+        line-height: 1;
+        position: relative;
+        padding-left: 1.3rem;
+        margin: 3rem 0 1rem;
+        &::before {
+          content: '';
+          width: 6px;
+          height: 100%;
+          border-radius: 2px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: $purple-font;
+        }
+      }
+      &--secondary {
+        font-size: 20px;
+        margin: 0.8rem 0 0.5rem;
+      }
+    }
+  }
+}
