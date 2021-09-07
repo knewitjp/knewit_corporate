@@ -42,4 +42,40 @@ body {
       }
     }
   }
+  .article-bottom {
+    // margin-top: 3rem;
+    .prev-next-articles {
+      margin-top: 2rem;
+      display: flex;
+      padding: 1.5rem;
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+      &__prev,
+      &__next {
+        width: 50%;
+        // background: gray;
+        padding: 1rem 0;
+        @include flex-center;
+      }
+      &__link {
+        color: $purple-font;
+        font-size: 14px;
+      }
+      &__divider {
+        width: 1px;
+        margin: 0 0.7rem;
+        // height: 110%;
+        background: $gray;
+      }
+    }
+    .link-to-news-page {
+      display: block;
+      margin-top: 1.5rem;
+      text-align: center;
+      color: $purple-font;
+    }
+  }
+  @include mq(md) {
+    padding: 5rem;
+  }
 }
