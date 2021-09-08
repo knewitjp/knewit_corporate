@@ -9,3 +9,92 @@
     padding: 6rem 0;
   }
 }
+
+.contact-component {
+  padding: 3rem 15px;
+  @include mq(md) {
+    // padding:
+    // background: red;
+    padding: 3rem 5rem;
+  }
+  &__par {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  &__form {
+    background: $light-gray;
+    padding: 0 0 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    @include mq(md) {
+      padding: 2rem;
+    }
+  }
+  &__list {
+    padding: 1.5rem;
+  }
+  &__list-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    .note {
+      color: $purple-font;
+      font-size: 14px;
+    }
+    .note-gray {
+      color: gray;
+      font-size: 12px;
+    }
+  }
+  &__label {
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+  }
+
+  input[type='text'] {
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 2px;
+    height: 40px;
+    background: #fff;
+    font-size: 20px;
+    padding-left: 8px;
+    @include mq(md) {
+      max-width: 300px;
+    }
+  }
+  @include mq(md) {
+    .radio-wrapper {
+      display: flex;
+    }
+    .radio-list-item {
+      margin-right: 18px;
+    }
+  }
+  .radio-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  input[type='radio'] {
+    border-radius: 1px solid black;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+  }
+  textarea {
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 2px;
+    height: 240px;
+    background: #fff;
+    font-size: 20px;
+    padding-left: 8px;
+  }
+  select {
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 2px;
+    height: 40px;
+    background: #fff;
+    font-size: 14px;
+    padding-left: 8px;
+  }
+}

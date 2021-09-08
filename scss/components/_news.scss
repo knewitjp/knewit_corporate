@@ -10,7 +10,8 @@
   }
 
   @include mq(md) {
-    // display: flex;
+    display: flex;
+    flex-direction: column;
     // max-width: 960px;
     // padding: 0;
 

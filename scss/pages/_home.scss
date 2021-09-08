@@ -11,7 +11,7 @@
     .heading-section {
       margin-right: 2rem;
       h3 {
-        text-align: left;
+        text-align: center;
       }
     }
   }
@@ -91,8 +91,9 @@
   }
   &__desc {
     margin: 1.5rem 0;
+    text-align: center;
   }
-  @include mq(md) {
+  @include mq(lg) {
     max-width: 1140px;
     padding: 0 3rem;
     margin: 0 auto 7rem;
@@ -101,7 +102,9 @@
     &__img-wrapper {
       // flex: 0 0 59.9099%;
       img {
+        max-height: 650px;
         width: 100%;
+
         display: block;
       }
     }
@@ -109,6 +112,10 @@
       width: 40%;
       padding: 0;
       justify-content: center;
+      @include mq(md) {
+        width: unset;
+        padding: 2rem;
+      }
     }
   }
 }

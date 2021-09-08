@@ -1,8 +1,8 @@
 @import './base/ress';
 @import './base/variables';
-@import './base/typography';
 @import './base/base';
 @import './base/mixins';
+@import './base/typography';
 @import './base/utilities';
 
 @import './layout/layout';
@@ -12,6 +12,7 @@
 @import './components/hero';
 @import './components/button';
 @import './components/company';
+@import './components/recruit';
 @import './components/menu';
 @import './components/service';
 @import './components/works';
@@ -20,6 +21,7 @@
 @import './components/to-top';
 @import './components/news';
 @import './components/article';
+@import './components/contact';
 @import './components/pagination';
 @import './components/contact';
 

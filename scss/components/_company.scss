@@ -45,18 +45,24 @@
 .company-info {
   margin-top: 2rem;
   padding: 0 $outer-margin-size;
+  @include mq(md) {
+    margin: 2rem auto 0;
+  }
   &__list {
     // background: pink;
-    display: flex;
+    // display: flex;
     padding: 1.2rem 1rem;
     border-bottom: 1px solid $gray;
     &:nth-child(1) {
       // border-top: 1px solid $gray;
       // border-top: none;
     }
+    @include mq(md) {
+      display: flex;
+    }
   }
   &__title {
-    width: 33%;
+    min-width: 100px;
     font-weight: 700;
     font-size: 16px;
   }
@@ -71,7 +77,9 @@
 .google-map-wrapper {
   padding: 0 15px;
   margin-bottom: 6rem;
-
+  @include mq(md) {
+    margin: 0 auto 6rem;
+  }
   a {
     margin-top: 0.5rem;
     display: block;
