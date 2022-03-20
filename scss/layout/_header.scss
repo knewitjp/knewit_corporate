@@ -7,8 +7,6 @@ header {
   justify-content: space-between;
   align-items: center;
   @include transition-ease;
-  &__logo {
-  }
   h1 {
     margin-left: $outer-margin-size;
     line-height: 50px;
