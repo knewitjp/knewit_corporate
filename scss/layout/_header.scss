@@ -16,9 +16,9 @@ header {
     align-items: center;
     cursor: pointer;
     img {
-      width: 35px;
+      height: 25px;
       @include mq(md) {
-        width: 45px;
+        height: 25px;
       }
     }
     @include mq(md) {
@@ -30,12 +30,7 @@ header {
   }
   &.open {
     @include transition-ease;
-    // background: linear-gradient(
-    //   to left,
-    //   rgba(7, 1, 45, 0.9) 50%,
-    //   rgba(7, 1, 45, 0.8) 70%,
-    //   rgba(35, 5, 80, 0.7) 100%
-    // );
-    background: rgba(30, 3, 70, 0.9);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 10px #e9e9e9;
   }
 }

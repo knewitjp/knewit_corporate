@@ -1,7 +1,7 @@
 const nav = document.querySelector('.nav')
+const navLinks = document.querySelectorAll('.nav__link')
 const menuBtn = document.querySelector('.menu-btn')
 const burger = document.querySelector('.burger')
-// const navItems = document.querySelectorAll('.menu-nav__item')
 const header = document.querySelector('header')
 let showMenu = false
 
@@ -45,24 +45,20 @@ const toTopBtn = document.querySelector('.to-top')
 
 function showBtn() {
   let pageY = window.pageYOffset
-  console.log(pageY)
-  if(pageY > 160){
+  // console.log(pageY)
+  if(pageY > 800){
     toTopBtn.classList.add('open')
     header.classList.add('open')
+    navLinks.forEach(el => {
+      el.classList.add('scrolled')
+    });
   } else {
     header.classList.remove('open')
     toTopBtn.classList.remove('open')
-
+    navLinks.forEach(el => {
+      el.classList.remove('scrolled')
+    });
   }
-  // if(pageY > 800) {
-  //   header.classList.add('open')
-  // } else if(pageY > 400){
-  //   toTopBtn.classList.add('open')
-  //   header.classList.remove('open')
-  // } else {
-  //   toTopBtn.classList.remove('open')
-
-  // }
 }
 
 toTopBtn.addEventListener('click', () => window.scrollTo(0, 0))
@@ -72,9 +68,9 @@ toTopBtn.addEventListener('click', () => window.scrollTo(0, 0))
 if(location.href.includes('article')) {
   let titleContent = document.querySelector('.breadcrumb__article-title').textContent
   if(titleContent.length > 10 && window.innerWidth < 380) {
-    console.log(window.innerWidth)
+    // console.log(window.innerWidth)
     const shortTitle = titleContent.slice(0, 12)
-    console.log(shortTitle)
+    // console.log(shortTitle)
     document.querySelector('.breadcrumb__article-title').textContent = shortTitle + '...';
   }
 }
