@@ -1,20 +1,39 @@
 .service {
+  // border: 1px solid red;
   padding: 0 $outer-margin-size;
   margin-top: 5rem;
   margin-bottom: 5rem;
   &__list {
     margin-top: 2rem;
+    hr {
+      opacity: .3;
+    }
   }
-
+  &__list-item {
+    margin-top: 3rem;
+  }
   &__img {
     width: 100%;
+    max-width: 200px;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  &__position {
+    text-align: center;
+    // border: 1px solid red;
+    line-height: 1;
+    margin: 0.7rem 0 0;
+    color: $darkgray;
   }
   &__title {
-    margin: 0.3rem 0;
+    margin: 0 0 0.3rem;
+    // border: 1px solid red;
     text-align: center;
   }
   &__desc {
     margin-bottom: 2.5rem;
+    line-height: 1.5;
   }
   &__btn-wrapper {
     a {
@@ -35,6 +54,38 @@
 }
 .service-page-main {
   .service {
+    &__list-item {
+      position: relative;
+
+    }
+    &__list-item-sns {
+      position: absolute;
+      bottom: -4rem;
+      right: 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      // flex-direction: column;
+      a {
+        margin: 0 10px;
+      }
+      img {
+        height: 30px;
+      }
+    }
+    &__desc {
+      padding-left: 1rem;
+      margin-bottom: 5rem;
+      // background: red;
+      li {
+        list-style: circle;
+        // list-style: none;
+        span {
+          font-weight: bold;
+          background:linear-gradient(transparent 60%, rgb(154, 220, 240) 60%);
+        }
+      }
+    }
     @include mq(md) {
       margin-top: 0;
       margin-bottom: 4rem;
@@ -43,33 +94,64 @@
         flex-direction: column;
       }
       &__list-item {
+        position: relative;
         width: 100%;
         display: grid;
         grid-template-columns: 42% 55%;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 37px 40px auto;
         grid-template-areas:
-          'left top-right'
-          'left bottom-right';
-        //   grid-column-gap: 3rem;
+          'left right-1'
+          'left right-2'
+          'left right-3';
+        margin-top: 3rem;
         margin-bottom: 3rem;
+      }
+      &__list-item-sns {
+        position: absolute;
+        // display: block;
+        justify-content: right;
+        top: 1.2rem;
+        left: 0px;
+        a {
+          margin: 6px;
+        }
+        img {
+          height: 30px;
+        }
       }
       &__img {
         // width: ;
         grid-area: left;
       }
-      &__title {
-        grid-area: top-right;
+      &__position {
+        grid-area: right-1;
         text-align: left;
-        padding-left: 2rem;
+        padding-left: 0;
+      }
+      &__title {
+        grid-area: right-2;
+        text-align: left;
+        padding-left: 0;
         line-height: 1;
         margin: 0 0 1rem;
         //   height: ;
       }
       &__desc {
-        grid-area: bottom-right;
-        padding-left: 2rem;
+        grid-area: right-3;
+        padding-left: 1rem;
         margin-bottom: 0;
       }
     }
   }
 }
+// .service-in-service-page {
+//   .service {
+//     &__list {
+//       border: 1px solid red;
+//     }
+//     &__list-item {
+//       border: 1px solid blue;
+//     }
+
+//   }
+// }

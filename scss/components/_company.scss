@@ -49,14 +49,8 @@
     margin: 2rem auto 0;
   }
   &__list {
-    // background: pink;
-    // display: flex;
     padding: 1.2rem 1rem;
     border-bottom: 1px solid $gray;
-    &:nth-child(1) {
-      // border-top: 1px solid $gray;
-      // border-top: none;
-    }
     @include mq(md) {
       display: flex;
     }

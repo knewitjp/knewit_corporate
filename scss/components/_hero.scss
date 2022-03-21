@@ -52,7 +52,8 @@
   }
 }
 .hero-sub {
-  background: url('../../img/hero.jpg');
+  // background: url('../../img/hero.jpg');
+  background: url('../../img/bg-highway.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -61,6 +62,7 @@
   @include flex-center;
   .heading-hero {
     padding-top: 2rem;
+    text-shadow: 0px 0px 3px rgb(0, 47, 70);
     &__primary {
       font-size: 36px;
       line-height: 1.2;
