@@ -46,7 +46,7 @@ const toTopBtn = document.querySelector('.to-top')
 function showBtn() {
   let pageY = window.pageYOffset
   // console.log(pageY)
-  if(pageY > 800){
+  if(pageY > 240){
     toTopBtn.classList.add('open')
     header.classList.add('open')
     navLinks.forEach(el => {
