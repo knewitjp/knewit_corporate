@@ -3,13 +3,14 @@
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
-  background-image: url('/img/sp_bg-circle.png');
+  // background-image: url('/img/sp_bg-circle.png');
   background-position: center center;
   background-size: 375px;
   text-align: center;
   @include mq(md) {
     // margin-top: 3rem;
-    background-image: url('/img/bg-circle.png'), url('/img/bg-face.png');
+    // background-image: url('/img/bg-circle.png'), url('/img/bg-face.png');
+    // background-image: url('/img/bg-circle.png');
     background-position: center -10px, center 40px;
     background-size: 70%, 90%;
   }
