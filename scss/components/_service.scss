@@ -42,7 +42,7 @@
   }
   @include mq(md) {
     max-width: 960px;
-    margin: 0 auto 9rem;
+    margin: 0 auto 13rem;
     &__list {
       display: flex;
       justify-content: space-between;
