@@ -23,6 +23,6 @@ footer {
   .copyright {
     @include flex-center;
     margin-top: 2rem;
-    color: #333;
+    color: $light-gray;
   }
 }

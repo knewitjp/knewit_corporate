@@ -14,9 +14,9 @@
     @include flex-center;
 
     // background: red;
-    background: $purple-gradient;
+    background: $skyblue-gradient;
     &.active {
-      color: $purple-font;
+      color: $skyblue-font;
       background: rgb(204, 197, 227);
     }
   }
