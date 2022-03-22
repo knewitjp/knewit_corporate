@@ -88,7 +88,7 @@
     background: #fff;
     position: relative;
     @include transition-ease;
-
+    
     &::before,
     &::after {
       position: absolute;
@@ -113,6 +113,19 @@
       &::after {
         top: 0;
         transform: rotate(-45deg);
+      }
+    }
+  }
+  // スクロール時は、背景が白になるので、バーガーをダークグレイに
+  .burger.scrolled {
+    background: $darkgray;
+    &::before, &::after {
+      background: $darkgray;
+    }
+    &.open {
+      background: transparent;
+      &::before, &::after {
+        background: #fff;
       }
     }
   }
