@@ -44,6 +44,7 @@
       margin-bottom: 0;
     }
     &__link {
+      color: $darkgray;
       font-size: 14px;
       font-weight: 400;
       padding-bottom: 3px;
@@ -64,9 +65,9 @@
           width: 100%;
         }
       }
-      &.scrolled {
-        color: #333;
-      }
+      // &.scrolled {
+      //   color: #333;
+      // }
     }
   }
 }
@@ -85,7 +86,8 @@
   .burger {
     width: 29px;
     height: 2px;
-    background: #fff;
+    // background: #fff;
+    background: $darkgray;
     position: relative;
     @include transition-ease;
     
@@ -95,7 +97,8 @@
       content: '';
       width: 29px;
       height: 2px;
-      background: #fff;
+      // background: #fff;
+      background: $darkgray;
       @include transition-ease;
     }
     &::before {
@@ -109,26 +112,28 @@
       &::before {
         top: 0;
         transform: rotate(45deg);
+        background: #fff;
       }
       &::after {
         top: 0;
         transform: rotate(-45deg);
-      }
-    }
-  }
-  // スクロール時は、背景が白になるので、バーガーをダークグレイに
-  .burger.scrolled {
-    background: $darkgray;
-    &::before, &::after {
-      background: $darkgray;
-    }
-    &.open {
-      background: transparent;
-      &::before, &::after {
         background: #fff;
       }
     }
   }
+  // スクロール時は、背景が白になるので、バーガーをダークグレイに
+  // .burger.scrolled {
+  //   background: $darkgray;
+  //   &::before, &::after {
+  //     background: $darkgray;
+  //   }
+  //   &.open {
+  //     background: transparent;
+  //     &::before, &::after {
+  //       background: #fff;
+  //     }
+  //   }
+  // }
 }
 
 .header__logo--link {

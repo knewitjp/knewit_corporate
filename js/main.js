@@ -49,14 +49,14 @@ function showBtn() {
   if(pageY > 240){
     toTopBtn.classList.add('open')
     header.classList.add('open')
-    burger.classList.add('scrolled')
+    // burger.classList.add('scrolled')
     navLinks.forEach(el => {
       el.classList.add('scrolled')
     });
   } else {
     header.classList.remove('open')
     toTopBtn.classList.remove('open')
-    burger.classList.remove('scrolled')
+    // burger.classList.remove('scrolled')
     navLinks.forEach(el => {
       el.classList.remove('scrolled')
     });
