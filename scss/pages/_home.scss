@@ -39,7 +39,8 @@
     background: $skyblue-font;
   }
   .swiper-slide img {
-    width: 100%;
+    // width: 100%;
+    max-height: 300px;
   }
   .heading-section {
     position: relative;
